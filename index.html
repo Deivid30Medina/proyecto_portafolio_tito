@@ -13,19 +13,42 @@
     <link rel="stylesheet" href="styles/index.css">
     <title>Tito Perilla Ingeniero de papel</title>
   </head>
-
   <body>
     <header class="header">
-      <nav class="navbar">
-        
+      <nav class="navbar" id="idNavbar">
+        <a class="logoEnlace" href="#video">
+          <img class="logoSvg" src="assets/svg/icons/logotito.svg" alt="Logo Tito">
+        </a>
+        <button id="idBtnAbrir" class="botonAbrirMenu">
+          <i class="bi bi-list abrirMenuSvg"></i>
+        </button>
+        <ul class="ulEnlaces" id="idUlEnlaces">
+          <button id="idBtnCerrar" class="botonCerrarMenu">
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <li class="liApartado"><a class="enlaceLiApartado" href="#publicaciones">LIRBROS POP PUP</a></li>
+          <li class="liApartado"><a class="enlaceLiApartado" href="">ILUSTRACIÓN</a></li>
+          <li class="liApartado"><a class="enlaceLiApartado" href="">SOBRE MI</a></li>
+          <li class="liApartado"><a class="enlaceLiApartado" href="">CONTACTO</a></li>
+          <li class="liApartado"><a class="enlaceLiApartado" href="">TIENDA</a></li>
+          <li class="liApartado"><a class="enlaceLiApartado" href="">BLOG</a></li>
+        </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="video" id="video">
+
+      </section>
+      <section class="publicaciones">
+
+      </section>
+    </main>
     <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
