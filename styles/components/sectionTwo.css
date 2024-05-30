@@ -1,0 +1,5 @@
+.publicaciones{
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    border: 1px solid rgb(216, 27, 21);
+}

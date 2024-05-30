@@ -1,0 +1,43 @@
+.footer {
+    background-color: gray;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footerTito {
+    padding: 0 10% 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 90%;
+}
+.Containericonfooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+}
+.enlacefooter {
+}
+.imgredfooter {
+}
+.logotTitoFooter{
+    height: 6rem;
+}
+.ContainerinformacionFooter {
+}
+.footerPTito {
+    color: white;
+}
+.footerContainerDeivid {
+    background-color: black;
+    height: 20%;
+}
+.footerPDeivid {
+    text-align: right;
+    padding: 0 2% 0 0;
+    color: gray;
+}
