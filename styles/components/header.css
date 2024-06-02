@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: space-between;
     list-style-type: none;
-    width: 80%;
+    width: 60%;
 }
 .botonCerrarMenu {
     display: none;
