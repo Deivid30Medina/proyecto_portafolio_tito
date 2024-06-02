@@ -39,7 +39,7 @@
     background-color: black;
 }
 .footerPDeivid {
-    font-size: 0.7rem;
+    font-size: var(--size_footer);
     padding: 0 2% 0 2%;
     color: gray;
 }

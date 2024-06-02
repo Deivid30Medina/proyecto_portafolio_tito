@@ -37,6 +37,7 @@
 .liApartado {
 }
 .enlaceLiApartado {
+    font-size: var(--size_header);
     text-decoration: none;
     color: var(--color_letra);
 }

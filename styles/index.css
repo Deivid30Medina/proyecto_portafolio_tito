@@ -7,6 +7,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+    --color_letra: rgb(0, 0, 0);
+    --size_header: 0.9rem;
+    --size_footer: 0.7rem;
+}
+
 p{
     margin: 0;
     padding: 0;
@@ -21,16 +27,14 @@ html{
 }
 
 body{
-    background-color: rgb(152, 207, 189);
+    background-color: rgba(58, 58, 58, 0.589);
     height: 100vh;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
-:root{
- --color_letra: black
-}
+
 
 
 section[id]{
