@@ -72,6 +72,11 @@ body{
 
 section[id]{
     scroll-margin-top: 80px;
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 
