@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sf ;
     font-family:"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
@@ -11,6 +12,7 @@
     --color_letra: rgb(0, 0, 0);
     --size_header: 0.9rem;
     --size_footer: 0.7rem;
+    --size_footerTito: 0.8rem;
 }
 
 p{
