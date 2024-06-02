@@ -24,7 +24,7 @@
 .imgredfooter {
 }
 .logotTitoFooter{
-    height: 10rem;
+    height: 8rem;
 }
 .ContainerinformacionFooter {
 }
@@ -39,6 +39,7 @@
     background-color: black;
 }
 .footerPDeivid {
+    font-size: 0.7rem;
     padding: 0 2% 0 2%;
     color: gray;
 }
