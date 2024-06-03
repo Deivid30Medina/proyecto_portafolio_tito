@@ -10,6 +10,8 @@
 
 :root{
     --color_letra: rgb(0, 0, 0);
+    --color_header: white;
+    --color_text_home: white;
     --size_header: 0.9rem;
     --size_footer: 0.7rem;
     --size_footerTito: 0.8rem;
@@ -42,9 +44,6 @@ section[id]{
     scroll-margin-top: 60px;
     margin-top: 60px;
     height: calc(100vh - 60px);
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
 }
 
 

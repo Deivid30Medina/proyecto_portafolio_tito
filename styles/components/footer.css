@@ -23,6 +23,17 @@
 }
 .imgredfooter {
 }
+/* .enlacefooter:hover .imgredfooter{
+    filter: invert(21%) sepia(94%) saturate(7244%) hue-rotate(0deg) brightness(95%) contrast(105%);
+}
+*/
+
+/* invert(100%): Invierte los colores del SVG.
+sepia(0%): Ajusta la intensidad del efecto sepia.
+saturate(0%): Ajusta la saturación de los colores.
+hue-rotate(0deg): Rota los colores en el espectro de tonos.
+brightness(100%): Ajusta el brillo del SVG.
+contrast(100%): Ajusta el contraste del SVG. */
 .logotTitoFooter{
     height: 8rem;
 }
