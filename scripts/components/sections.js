@@ -1,3 +1,5 @@
+import { initVideo } from './sectionhome.js';
+
 const sections = [
     "./pages/section-video.html"
     ,"./pages/section-publicaciones.html"
@@ -18,14 +20,10 @@ async function loadAllSections(){
         const sectionConten = await loadSection(section);
         main.innerHTML += sectionConten;
     }
+    // Después de cargar todas las secciones, inicializa el video
+    initVideo();
 }
 
 window.onload = () => {
     loadAllSections();
 };
-
-
-
-
-
-
