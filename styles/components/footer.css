@@ -20,8 +20,13 @@
     column-gap: 0.5rem;
 }
 .enlacefooter {
+    transition: transform 0.5s ease-in-out;
+}
+.enlacefooter:hover {
+    transform: scale(1.5);
 }
 .imgredfooter {
+    
 }
 /* .enlacefooter:hover .imgredfooter{
     filter: invert(21%) sepia(94%) saturate(7244%) hue-rotate(0deg) brightness(95%) contrast(105%);
@@ -38,7 +43,13 @@ contrast(100%): Ajusta el contraste del SVG. */
     height: 8rem;
 }
 .ContainerinformacionFooter {
+    transition: transform 0.5s ease-in-out;
 }
+
+.ContainerinformacionFooter:hover {
+    transform: scale(1.2);
+}
+
 
 .footerPTito {
     font-size: var(--size_footerTito);
@@ -46,7 +57,14 @@ contrast(100%): Ajusta el contraste del SVG. */
     color: white;
     font-weight: 100;
     letter-spacing: 2px;
+    
 }
+
+.footerPTito:hover {
+    
+}
+
+
 .footerContainerDeivid {
     display: flex;
     align-items: center;

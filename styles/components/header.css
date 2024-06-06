@@ -4,6 +4,7 @@
     background-color: var(--color_header);
     position: fixed;
     z-index: 10;
+    border: 2px solid black;
 }
 .navbar {
     height: 100%;
