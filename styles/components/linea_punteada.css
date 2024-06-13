@@ -1,0 +1,22 @@
+.dashed-line-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.dashed-line-svg {
+    width: 100%;
+    height: 7.4px;
+    /* stroke-dasharray="10,10" define los guiones (10 unidades) y los espacios (10 unidades). */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="10"><line x1="0" y1="5" x2="100%" y2="5" stroke="black" stroke-width="4" stroke-dasharray="10,10" /></svg>') repeat-x;
+}
+
+.iconTijera{
+    position: absolute;
+    z-index: 2;
+    width: auto;
+    height: 4.6rem;
+}

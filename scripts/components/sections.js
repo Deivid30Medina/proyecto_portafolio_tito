@@ -3,8 +3,11 @@ import { initVideo } from './sectionhome.js';
 const sections = [
     "./pages/section-video.html"
     ,"./pages/section-publicaciones.html"
+    ,"./pages/linea-punteada.html"
     ,"./pages/section-ilustraciones.html"
+    ,"./pages/linea-punteada.html"
     ,"./pages/section-sobremiVideos.html"
+    ,"./pages/linea-punteada.html"
     ,"./pages/section-sobremiInformacion.html"
 ];
 

@@ -43,7 +43,7 @@ body{
 
 section[id]{
     scroll-margin-top: 60px;
-    margin-top: 60px;
+    margin-top: 0px;
     height: calc(100vh - 60px);
 }
 

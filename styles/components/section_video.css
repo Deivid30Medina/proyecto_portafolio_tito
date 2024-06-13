@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    margin-top: 60px !important;
 }
 
 .video::before {
