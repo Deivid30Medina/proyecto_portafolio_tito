@@ -1,52 +1,59 @@
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sf ;
-    font-family:"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sf;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
 }
 
-:root{
-    --color_letra: rgb(0, 0, 0);
-    --color_header: white;
-    --color_text_home: white;
-    --color_body: white;
-    --size_header: 0.9rem;
-    --size_footer: 0.7rem;
-    --size_footerTito: 0.8rem;
+:root {
+  --color_letra: rgb(0, 0, 0);
+  --color_header: white;
+  --color_text_home: white;
+  --color_body: white;
+  --size_header: 0.9rem;
+  --size_footer: 0.7rem;
+  --size_footerTito: 0.8rem;
 }
 
-p{
-    margin: 0;
-    padding: 0;
+p {
+  margin: 0;
+  padding: 0;
 }
 
-dl, ol, ul {
-    margin: 0;
-    padding: 0;
+dl,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+html {
+  overflow-x: hidden;
+  overflow: hidden; /* Para ocultar la barra de desplazamiento en algunos navegadores */
+  overflow-y: scroll; /* Permite el desplazamiento vertical */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: var(--color_body);
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.html::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  display: none; /* Webkit (Chrome, Safari) */
 }
 
-section[id]{
-    scroll-margin-top: 60px;
-    margin-top: 0px;
-    height: calc(100vh - 60px);
+body {
+  background-color: var(--color_body);
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-
-
-
+section[id] {
+  scroll-margin-top: 60px;
+  margin-top: 0px;
+  height: calc(100vh - 60px);
+}
