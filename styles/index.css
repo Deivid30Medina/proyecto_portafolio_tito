@@ -31,18 +31,9 @@ ul {
 
 html {
   overflow-x: hidden;
-  overflow: hidden; /* Para ocultar la barra de desplazamiento en algunos navegadores */
-  overflow-y: scroll; /* Permite el desplazamiento vertical */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE y Edge */
-  scroll-behavior: smooth;
+
 }
 
-.html::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
-  display: none; /* Webkit (Chrome, Safari) */
-}
 
 body {
   background-color: var(--color_body);

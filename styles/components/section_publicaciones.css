@@ -1,3 +1,65 @@
 .publicaciones{
     border: 1px solid rgb(21, 57, 216);
+    margin-top: 60px !important;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.containerPrincipal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+.btnPrev,.btnNext  {
+    border: 1px solid rgb(9, 248, 9);
+    width: 10%;
+    height: 50px;
+    cursor: pointer;
+}
+.containerCarrusel {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.classTitlr {
+}
+.sliderGallery {
+    border: 1px solid rgb(248, 0, 207);
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.sliderGallery::-webkit-scrollbar {
+    display: none;
+}
+
+
+.slideer {
+    border: 1px solid rgb(250, 17, 0);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 25px;
+    padding: 25px 25px 25px 0;
+    flex: none;
+}
+.sliderImg {
+    object-fit: scale-down;
+    height: 35rem;
+    width: 100%;
+}
+.textoFinal {
+}
+.btnNext {
+    transform: rotate(180deg);
 }
