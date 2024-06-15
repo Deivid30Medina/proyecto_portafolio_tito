@@ -123,7 +123,7 @@ export function initSlider() {
          * Evento para el botón siguiente.
          */
         const handleNextClick = () => {
-            scrollContainer.scrollBy({ left: (containerWidth / 2) , behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
+            scrollContainer.scrollBy({ left: (containerWidth / 2) - 1, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
             setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
         };
 
