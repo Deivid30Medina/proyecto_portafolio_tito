@@ -90,6 +90,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 3px solid black;
 }
 
 .sliderImg {
@@ -112,5 +113,39 @@
 }
 
 .btnNext {
-    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.btnPrev {
+    transition: transform 0.5s ease-in-out;
+}
+
+.btnPrev:hover {
+    transform: scale(1.2);
+}
+
+.btnNext:hover {
+    transform: scale(1.2);
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #c01a1a;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #333;
 }
