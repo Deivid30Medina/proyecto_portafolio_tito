@@ -92,6 +92,7 @@
     justify-content: center;
     border: 3px solid black;
     cursor: pointer;
+    position: relative;
 }
 
 .sliderImg {
@@ -101,6 +102,17 @@
 
     max-height: 500px;
     margin: 0 15px;
+}
+
+.etiqueta{
+    position: absolute;
+    background-color: #ffd100;
+    color: #8e4814;
+    font-size: 1.5rem;
+    padding: 0.5% 2.5%;
+    top: -6%;
+    right: 12%;
+    transform: rotate(-2deg);
 }
 
 .textoFinal {
