@@ -1,27 +1,24 @@
-// slider.js
-
 export function initSlider() {
     const scrollContainer = document.querySelector(".sliderGallery");
     const prevBtn = document.getElementById("idBtnPrev");
     const nextBtn = document.getElementById("idBtnNex");
     const indicatorsContainer = document.querySelector(".indicators");
     const slides = document.querySelectorAll(".slideer");
-    const velocidadSlide = 300;
+    const velocidadSlide = 500;
     let indicatorNow = 0;
-    let autoSlideInterval;
 
     if (scrollContainer && prevBtn && nextBtn) {
         const containerWidth = scrollContainer.offsetWidth;
-
+    
         // Inicializa la posición del scroll al inicio
         const initializePosition = () => {
             scrollContainer.scrollLeft = 0; // Ajustar para la posición inicial
         };
-
+    
         // Función para chequear y ajustar la posición del slider si es necesario.
         const checkPosition = () => {
             const maxScrollLeft = scrollContainer.scrollWidth - containerWidth;
-
+    
             if (scrollContainer.scrollLeft >= maxScrollLeft) {
                 scrollContainer.scrollLeft = 0; // Vuelve al inicio
                 requestAnimationFrame(() => {
@@ -34,7 +31,7 @@ export function initSlider() {
                 });
             }
         };
-
+    
         // Generar indicadores
         const createIndicators = () => {
             for (let i = 0; i < slides.length; i++) {
@@ -45,7 +42,7 @@ export function initSlider() {
                 indicatorsContainer.appendChild(indicator);
             }
         };
-
+    
         const pintIndicator = (next, prev) => {
             console.log(next, prev);
             const indicatorOld = document.querySelector(`.id-indicator-${prev}`);
@@ -53,7 +50,7 @@ export function initSlider() {
             indicatorNew.classList.add("active");
             indicatorOld.classList.remove("active");
         }
-
+    
         // Actualizar indicadores
         const updateIndicators = (direction) => {
             const totalIndicators = slides.length;
@@ -61,7 +58,7 @@ export function initSlider() {
             indicatorNow = (indicatorNow + direction + totalIndicators) % totalIndicators;
             pintIndicator(indicatorNow, prev);
         };
-
+    
         // Evento de desplazamiento con la rueda del mouse.
         const handleWheelScroll = (event) => {
             event.preventDefault(); // Previene el comportamiento por defecto del scroll
@@ -71,51 +68,39 @@ export function initSlider() {
             scrollContainer.scrollBy({ left: event.deltaY, behavior: 'smooth' }) - 10; // Desplaza el contenido suavemente
             setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
         };
-
+    
         // Evento para el botón siguiente.
         const handleNextClick = () => {
-            scrollContainer.scrollBy({ left: containerWidth - 1, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
+            scrollContainer.scrollBy({ left: (containerWidth ) - 1, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
             requestAnimationFrame(() => {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
             setTimeout(checkPosition, velocidadSlide); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(1);
         };
-
+    
         // Evento para el botón anterior.
         const handlePrevClick = () => {
-            scrollContainer.scrollBy({ left: -containerWidth - 1, behavior: 'smooth' }); // Desplaza el contenido a la izquierda suavemente
+            scrollContainer.scrollBy({ left: - (containerWidth ) - 1 , behavior: 'smooth' }); // Desplaza el contenido a la izquierda suavemente
             requestAnimationFrame(() => {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
             setTimeout(checkPosition, velocidadSlide); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(-1);
         };
-
-        // Iniciar desplazamiento automático
-        const startAutoSlide = () => {
-            autoSlideInterval = setInterval(handleNextClick, 2000); // 2000ms = 2 segundos
-        };
-
-        // Detener el desplazamiento automático
-        const stopAutoSlide = () => {
-            clearInterval(autoSlideInterval);
-        };
-
+    
         // Inicializar la posición del scroll
         initializePosition();
-
+    
         // Crear indicadores
         createIndicators();
-
+    
         // Asignar los eventos correspondientes
         // scrollContainer.addEventListener("wheel", handleWheelScroll);
         nextBtn.addEventListener("click", handleNextClick);
         prevBtn.addEventListener("click", handlePrevClick);
-
-        // Iniciar el desplazamiento automático
-        // startAutoSlide();
     } else {
         console.error("No se encontraron los elementos del slider."); // Muestra un error si los elementos no fueron encontrados
     }
+
 }

@@ -1,5 +1,5 @@
 import { initVideo } from './sectionhome.js';
-import { initSlider  } from './publicactions/slider.js';
+import { initSlider  } from './publicactions/slider2.js';
 
 const sections = [
     "./pages/section-video.html"
