@@ -6,7 +6,10 @@ export function initSlider() {
     const nextBtn = document.getElementById("idBtnNex");
     const indicatorsContainer = document.querySelector(".indicators");
     const slides = document.querySelectorAll(".slideer");
+    const velocidadSlide = 300;
     let indicatorNow = 0;
+    let autoSlideInterval;
+    const tiempoCambioAutomaticoSlider = 6000;
 
     if (scrollContainer && prevBtn && nextBtn) {
         const containerWidth = scrollContainer.offsetWidth;
@@ -72,7 +75,7 @@ export function initSlider() {
             requestAnimationFrame(() => {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
-            scrollContainer.scrollBy({ left: (containerWidth ) - 1, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
+            scrollContainer.scrollBy({ left: containerWidth, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
             setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(1);
         };
@@ -82,9 +85,19 @@ export function initSlider() {
             requestAnimationFrame(() => {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
-            scrollContainer.scrollBy({ left: - (containerWidth ) - 1 , behavior: 'smooth' }); // Desplaza el contenido a la izquierda suavemente
+            scrollContainer.scrollBy({ left: -containerWidth, behavior: 'smooth' }); // Desplaza el contenido a la izquierda suavemente
             setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(-1);
+        };
+
+        // Iniciar desplazamiento automático
+        const startAutoSlide = () => {
+            autoSlideInterval = setInterval(handleNextClick, tiempoCambioAutomaticoSlider); // 2000ms = 2 segundos
+        };
+
+        // Detener el desplazamiento automático
+        const stopAutoSlide = () => {
+            clearInterval(autoSlideInterval);
         };
 
         // Inicializar la posición del scroll
@@ -94,9 +107,12 @@ export function initSlider() {
         createIndicators();
 
         // Asignar los eventos correspondientes
-        // scrollContainer.addEventListener("wheel", handleWheelScroll);
+        scrollContainer.addEventListener("wheel", handleWheelScroll);
         nextBtn.addEventListener("click", handleNextClick);
         prevBtn.addEventListener("click", handlePrevClick);
+
+        // Iniciar el desplazamiento automático
+        startAutoSlide();
     } else {
         console.error("No se encontraron los elementos del slider."); // Muestra un error si los elementos no fueron encontrados
     }
