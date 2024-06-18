@@ -6,9 +6,7 @@ export function initSlider() {
     const nextBtn = document.getElementById("idBtnNex");
     const indicatorsContainer = document.querySelector(".indicators");
     const slides = document.querySelectorAll(".slideer");
-    const velocidadSlide = 300;
     let indicatorNow = 0;
-    let autoSlideInterval;
 
     if (scrollContainer && prevBtn && nextBtn) {
         const containerWidth = scrollContainer.offsetWidth;
@@ -65,41 +63,28 @@ export function initSlider() {
         // Evento de desplazamiento con la rueda del mouse.
         const handleWheelScroll = (event) => {
             event.preventDefault(); // Previene el comportamiento por defecto del scroll
-            requestAnimationFrame(() => {
-                scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
-            });
             scrollContainer.scrollBy({ left: event.deltaY, behavior: 'smooth' }) - 10; // Desplaza el contenido suavemente
             setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
         };
 
         // Evento para el botón siguiente.
         const handleNextClick = () => {
-            scrollContainer.scrollBy({ left: containerWidth - 1, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
             requestAnimationFrame(() => {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
-            setTimeout(checkPosition, velocidadSlide); // Chequea y ajusta la posición después de un tiempo
+            scrollContainer.scrollBy({ left: (containerWidth ) - 1, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
+            setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(1);
         };
 
         // Evento para el botón anterior.
         const handlePrevClick = () => {
-            scrollContainer.scrollBy({ left: -containerWidth - 1, behavior: 'smooth' }); // Desplaza el contenido a la izquierda suavemente
             requestAnimationFrame(() => {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
-            setTimeout(checkPosition, velocidadSlide); // Chequea y ajusta la posición después de un tiempo
+            scrollContainer.scrollBy({ left: - (containerWidth ) - 1 , behavior: 'smooth' }); // Desplaza el contenido a la izquierda suavemente
+            setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(-1);
-        };
-
-        // Iniciar desplazamiento automático
-        const startAutoSlide = () => {
-            autoSlideInterval = setInterval(handleNextClick, 2000); // 2000ms = 2 segundos
-        };
-
-        // Detener el desplazamiento automático
-        const stopAutoSlide = () => {
-            clearInterval(autoSlideInterval);
         };
 
         // Inicializar la posición del scroll
@@ -112,9 +97,6 @@ export function initSlider() {
         // scrollContainer.addEventListener("wheel", handleWheelScroll);
         nextBtn.addEventListener("click", handleNextClick);
         prevBtn.addEventListener("click", handlePrevClick);
-
-        // Iniciar el desplazamiento automático
-        // startAutoSlide();
     } else {
         console.error("No se encontraron los elementos del slider."); // Muestra un error si los elementos no fueron encontrados
     }
