@@ -6,6 +6,7 @@ export function initSlider() {
     const nextBtn = document.getElementById("idBtnNex");
     const indicatorsContainer = document.querySelector(".indicators");
     const slides = document.querySelectorAll(".slideer");
+    const cards = document.querySelectorAll(".spanSlider");
     const velocidadSlide = 300;
     let indicatorNow = 0;
     let autoSlideInterval;
@@ -76,7 +77,7 @@ export function initSlider() {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
             scrollContainer.scrollBy({ left: containerWidth, behavior: 'smooth' }); // Desplaza el contenido a la derecha suavemente
-            setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
+            setTimeout(checkPosition, velocidadSlide); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(1);
         };
 
@@ -86,7 +87,7 @@ export function initSlider() {
                 scrollContainer.style.scrollBehavior = 'smooth'; // Reactiva el comportamiento suave
             });
             scrollContainer.scrollBy({ left: -containerWidth, behavior: 'smooth' }); // Desplaza el contenido a la izquierda suavemente
-            setTimeout(checkPosition, 300); // Chequea y ajusta la posición después de un tiempo
+            setTimeout(checkPosition, velocidadSlide); // Chequea y ajusta la posición después de un tiempo
             updateIndicators(-1);
         };
 
@@ -95,11 +96,16 @@ export function initSlider() {
             autoSlideInterval = setInterval(handleNextClick, tiempoCambioAutomaticoSlider); // 2000ms = 2 segundos
         };
 
+        // Reiniciar el desplazamiento automático
+        const resetAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        };
+
         // Detener el desplazamiento automático
         const stopAutoSlide = () => {
             clearInterval(autoSlideInterval);
         };
-
         // Inicializar la posición del scroll
         initializePosition();
 
@@ -107,9 +113,16 @@ export function initSlider() {
         createIndicators();
 
         // Asignar los eventos correspondientes
-        scrollContainer.addEventListener("wheel", handleWheelScroll);
+        // scrollContainer.addEventListener("wheel", handleWheelScroll);
         nextBtn.addEventListener("click", handleNextClick);
         prevBtn.addEventListener("click", handlePrevClick);
+
+        // Detener y reiniciar el desplazamiento automático al pasar el mouse sobre las tarjetas
+        cards.forEach(card => {
+            card.addEventListener("mouseover", stopAutoSlide);
+            card.addEventListener("mouseout", resetAutoSlide);
+            
+        });
 
         // Iniciar el desplazamiento automático
         startAutoSlide();
