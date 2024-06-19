@@ -10,6 +10,7 @@ export function initSlider() {
     const velocidadSlide = 300;
     let indicatorNow = 0;
     let autoSlideInterval;
+    let cont = slides.length;
     const tiempoCambioAutomaticoSlider = 6000;
 
     if (scrollContainer && prevBtn && nextBtn) {
@@ -58,6 +59,10 @@ export function initSlider() {
 
         // Actualizar indicadores
         const updateIndicators = (direction) => {
+            cont -= 1;
+            if (cont <= 0) {
+                clearInterval(autoSlideInterval);
+            }
             const totalIndicators = slides.length;
             let prev = indicatorNow;
             indicatorNow = (indicatorNow + direction + totalIndicators) % totalIndicators;
@@ -98,8 +103,10 @@ export function initSlider() {
 
         // Reiniciar el desplazamiento automático
         const resetAutoSlide = () => {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
+            if(cont > 0){
+                clearInterval(autoSlideInterval);
+                startAutoSlide();
+            }
         };
 
         // Detener el desplazamiento automático
