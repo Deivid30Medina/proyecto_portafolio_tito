@@ -141,7 +141,7 @@
 .efectoCardPubl {
     position: absolute;
     width: auto;
-    height: 110%;
+    height: 115%;
     bottom: 0;
     opacity: 0;
     transform: scale(0); /* Comienza con la imagen pequeña */
