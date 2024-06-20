@@ -80,7 +80,7 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 4%;
-    padding: 15px 4% 15px 0;
+    padding: 2%;
     flex: none;
 }
 
@@ -93,6 +93,7 @@
     border: 3px solid black;
     cursor: pointer;
     position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Añadir transición para la transformación y opacidad */
 }
 
 
@@ -106,7 +107,7 @@
     margin: 0 15px;
 }
 
-.spanSlider:hover{
+.spanSlider:hover {
     transform: 
         perspective(350px)
         rotateX(10deg)
@@ -114,7 +115,7 @@
         translateZ(0);
 }
 
-.spanSlider::before{
+.spanSlider::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -128,26 +129,28 @@
         rgb(0,0,0) 95%
     );
     opacity: 0;
-    transition: all .3s ease;
+    transition: opacity 0.5s ease; /* Asegurarse de que la transición para la opacidad sea suave */
 }
 
-.spanSlider:hover::before{
+.spanSlider:hover::before {
     opacity: 1;
 }
 
 
 
-.efectoCardPubl{
+.efectoCardPubl {
     position: absolute;
     width: auto;
-    height: 80%;
+    height: 110%;
     bottom: 0;
     opacity: 0;
+    transform: scale(0); /* Comienza con la imagen pequeña */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición suave para transform y opacity */
 }
 
-.spanSlider:hover .efectoCardPubl{
+.spanSlider:hover .efectoCardPubl {
     opacity: 1;
-
+    transform: scale(1); /* La imagen vuelve a su tamaño original */
 }
 
 .etiqueta{
