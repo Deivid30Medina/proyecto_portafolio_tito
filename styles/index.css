@@ -15,6 +15,12 @@
   --size_header: 0.9rem;
   --size_footer: 0.7rem;
   --size_footerTito: 0.8rem;
+
+  /* Variables para publicaciones */
+  --size_fuente_texto: 0.9rem;
+  --size_fuente_titulo: 1.5rem;
+  --size_etiqueta_slider: 1rem;
+
 }
 
 p {
