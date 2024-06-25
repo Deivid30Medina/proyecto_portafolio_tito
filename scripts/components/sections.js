@@ -1,5 +1,6 @@
 import { initVideo } from './sectionhome.js';
 import { initSlider  } from './publicactions/slider.js';
+import { loadDataSliderPublicaciones  } from './publicactions/load_data.js';
 
 const sections = [
     "./pages/section-video.html"
@@ -26,6 +27,7 @@ async function loadAllSections(){
     }
     // Después de cargar todas las secciones, inicializa el video
     initVideo();
+    await loadDataSliderPublicaciones();
     initSlider();
 }
 
