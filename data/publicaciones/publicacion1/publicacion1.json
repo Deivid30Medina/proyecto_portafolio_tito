@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "imagen_principal": "../../assets/images/publications/7-PublicacionesSiete.jpg"
+        },
+        {
+            "id": 2,
+            "imagen_principal": "../../assets/images/publications/2-PublicacionesDos.jpg"
+        },
+        {
+            "id": 3,
+            "imagen_principal": "../../assets/images/publications/6-PublicacionesSeis.jpg"
+        },
+        {
+            "id": 4,
+            "imagen_principal": "../../assets/images/publications/3-PublicacionesTres.jpg"
+        },
+        {
+            "id": 5,
+            "imagen_principal": "../../assets/images/publications/5-PublicacionesCinco.jpg"
+        },
+        {
+            "id": 6,
+            "imagen_principal": "../../assets/images/publications/6-PublicacionesSeis.jpg"
+        },
+        {
+            "id": 7,
+            "imagen_principal": "../../assets/images/publications/7-PublicacionesSiete.jpg"
+        },
+        {
+            "id": 8,
+            "imagen_principal": "../../assets/images/publications/8-Publicaciones8.jpg"
+        },
+        {
+            "id": 9,
+            "imagen_principal": "../../assets/images/publications/5-PublicacionesCinco.jpg"
+        },
+        {
+            "id": 10,
+            "imagen_principal": "../../assets/images/publications/6-PublicacionesSeis.jpg"
+        },
+        {
+            "id": 11,
+            "imagen_principal": "../../assets/images/publications/7-PublicacionesSiete.jpg"
+        },
+        {
+            "id": 12,
+            "imagen_principal": "../../assets/images/publications/8-Publicaciones8.jpg"
+        }
+    ]
+}

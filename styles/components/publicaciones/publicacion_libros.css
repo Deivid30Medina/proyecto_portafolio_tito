@@ -1,0 +1,249 @@
+h1,h2,h3,h4,h5,h6{
+    text-wrap: balance;
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    text-wrap: pretty;
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    scroll-margin-top: 60px;
+    margin-top: 0px;
+    height: calc(100vh - 60px);
+}
+  
+.PublicationDetail-title {
+    height: 10%;
+    width: 100%;
+    padding: 0% 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.PublicationDetail-container {
+    height: 90%;
+    width: 100%;
+    padding: 0 10%;
+    border: 1px solid rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.PublicationDetail-imageContainer {
+    width: 50%;
+    height: 90%;
+    position: relative;
+    border: 3px solid black;
+}
+
+.PublicationDetail-etiqueta{
+    position: absolute;
+    background-color: #FFCA55;
+    color: #8E4816;
+    padding: 0.5% 1.5%;
+    z-index: 2;
+    transform: rotate(-3deg);
+}
+
+.PublicationDetail-label1 {
+    top: -2%;
+    left: 10%;
+}
+.PublicationDetail-label2 {
+    bottom: -2%;
+    right: 15%;
+}
+.PublicationDetail-image {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* transition: opacity 1s ease-in-out, transform 1s ease-in-out; */
+}
+.PublicationDetail-elementsContainer {
+    width: 47%;
+    height: 90%;
+    border: 1px solid brown;
+}
+
+.PublicationDetail-btn-carousel{
+    width: 5%;
+    cursor: pointer;
+}
+
+.PublicationDetail-btnPrev{
+
+}
+
+.PublicationDetail-btnNext{
+
+}
+
+.PublicationDetail-carousel {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PublicationDetail_sliderGallery {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 5%;
+    padding: 0 0 0 5%;
+}
+
+.PublicationDetail_sliderGallery::-webkit-scrollbar {
+    display: none;
+}
+
+.PublicationDetail_slideer {
+    height: 100%;
+    min-width: 20%;
+    display: flex;
+    align-items: center;
+}
+.PublicationDetail_slider_img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    /* transition: transform 1s ease-in-out; */
+}
+
+
+.PublicationDetail-detail-information{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.PublicationDetail-Title-detail{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.PublicationDetail-subtitle {
+    
+}
+.PublicationDetail-subtitleDescription {
+    font-size: 1.2rem;
+    color: gray;
+}
+.PublicationDetail-description {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.PublicationDetail-FichaTecnica{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.PublicationDetail-details-informacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-top: 1px solid gray;
+}
+
+.PublicationDetail-LabelComun{
+    width: 20%;
+}
+
+.PublicationDetail-authorsInfo {
+}
+.PublicationDetail-authorsLabel {
+
+}
+.PublicationDetail-data {
+}
+.PublicationDetail-publicationInfo {
+}
+.PublicationDetail-publicationLabel {
+
+}
+.PublicationDetail-pagesInfo {
+}
+.PublicationDetail-pagesLabel {
+
+}
+.PublicationDetail-editorialInfo {
+}
+.PublicationDetail-editorialLabel {
+
+}
+.PublicationDetail-languageInfo {
+}
+.PublicationDetail-languageLabel {
+
+}
+.PublicationDetail-isbnInfo {
+}
+.PublicationDetail-isbnLabel {
+
+}
+.PublicationDetail-dimensionsInfo {
+    border-bottom: 1px solid gray;
+}
+.PublicationDetail-dimensionsLabel {
+
+}
+.PublicationDetail-buttons {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10%;
+    border: 1px solid rgb(65, 240, 12);
+}
+.PublicationDetail-buttonLink {
+    width: auto;
+    height: 100%;
+}
+.PublicationDetail-button {
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}
+.PublicationDetail-button--buy {
+}
+.PublicationDetail-button--more {
+    margin-left: 50%;
+}

@@ -1,77 +1,88 @@
 {
-    "id": 1,
     "data": [
         {
             "id": 1,
             "imagen_principal": "./assets/images/publications/7-PublicacionesSiete.jpg",
             "imagen_secundaria": "./assets/images/publications/2-1-Efecto.png",
-            "etiqueta": "POP PUP"
+            "etiqueta": "POP PUP",
+            "enlace": "./pages/publicaciones/publicacion1.html"
         },
         {
             "id": 2,
             "imagen_principal": "./assets/images/publications/2-PublicacionesDos.jpg",
             "imagen_secundaria": "./assets/images/publications/2-1-Efecto.png",
-            "etiqueta": "CÓMIC"
+            "etiqueta": "CÓMIC",
+            "enlace": "./pages/publicaciones/publicacion2.html"
         },
         {
             "id": 3,
             "imagen_principal": "./assets/images/publications/6-PublicacionesSeis.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion3.html"
         },
         {
             "id": 4,
             "imagen_principal": "./assets/images/publications/3-PublicacionesTres.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion4.html"
         },
         {
             "id": 5,
             "imagen_principal": "./assets/images/publications/5-PublicacionesCinco.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion5.html"
         },
         {
             "id": 6,
             "imagen_principal": "./assets/images/publications/6-PublicacionesSeis.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion6.html"
         },
         {
             "id": 7,
             "imagen_principal": "./assets/images/publications/7-PublicacionesSiete.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion7.html"
         },
         {
             "id": 8,
             "imagen_principal": "./assets/images/publications/8-Publicaciones8.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion8.html"
         },
         {
             "id": 9,
             "imagen_principal": "./assets/images/publications/5-PublicacionesCinco.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion9.html"
         },
         {
             "id": 10,
             "imagen_principal": "./assets/images/publications/6-PublicacionesSeis.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion10.html"
         },
         {
             "id": 11,
             "imagen_principal": "./assets/images/publications/7-PublicacionesSiete.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion11.html"
         },
         {
             "id": 12,
             "imagen_principal": "./assets/images/publications/8-Publicaciones8.jpg",
             "imagen_secundaria": "./assets/images/publications/3-1-Efecto.png",
-            "etiqueta": "INFANTÍL"
+            "etiqueta": "INFANTÍL",
+            "enlace": "./pages/publicaciones/publicacion12.html"
         }
     ]
 }

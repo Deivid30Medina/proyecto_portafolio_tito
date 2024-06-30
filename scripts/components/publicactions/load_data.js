@@ -1,4 +1,3 @@
-
 export function loadDataSliderPublicaciones() {
     return fetch('./data/publicaciones/publicaciones-data.json')
         .then(response => response.json())
@@ -16,24 +15,30 @@ export function loadDataSliderPublicaciones() {
                     const spanElement = document.createElement('span');
                     spanElement.classList.add('spanSlider', 'flex-center');
 
+                    const linkElement = document.createElement('a');
+                    linkElement.classList.add('classlinkPublicacion');
+                    linkElement.setAttribute('target', '_parent');
+                    linkElement.href = item.enlace;
+
                     const imgPrincipal = document.createElement('img');
                     imgPrincipal.src = item.imagen_principal;
                     imgPrincipal.alt = item.etiqueta;
                     imgPrincipal.classList.add('sliderImg');
+
+                    const etiqueta = document.createElement('p');
+                    etiqueta.textContent = item.etiqueta;
+                    etiqueta.classList.add('etiqueta');
 
                     const imgSecundaria = document.createElement('img');
                     imgSecundaria.src = item.imagen_secundaria;
                     imgSecundaria.alt = item.etiqueta;
                     imgSecundaria.classList.add('efectoCardPubl');
 
-                    const etiqueta = document.createElement('p');
-                    etiqueta.textContent = item.etiqueta;
-                    etiqueta.classList.add('etiqueta');
+                    linkElement.appendChild(imgPrincipal);
+                    linkElement.appendChild(etiqueta);
+                    linkElement.appendChild(imgSecundaria);
 
-                    spanElement.appendChild(imgPrincipal);
-                    spanElement.appendChild(etiqueta);
-                    spanElement.appendChild(imgSecundaria);
-
+                    spanElement.appendChild(linkElement);
                     divElement.appendChild(spanElement);
                 });
 
@@ -50,4 +55,3 @@ function chunkArray(array, chunkSize) {
     }
     return results;
 }
-

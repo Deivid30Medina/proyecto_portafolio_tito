@@ -4,7 +4,7 @@ import { loadDataSliderPublicaciones  } from './publicactions/load_data.js';
 
 const sections = [
     "./pages/section-video.html"
-    ,"./pages/section-publicaciones.html"
+    ,"./pages/publicaciones/section-publicaciones.html"
     ,"./pages/linea-punteada.html"
     ,"./pages/section-ilustraciones.html"
     ,"./pages/linea-punteada.html"
@@ -13,10 +13,67 @@ const sections = [
     ,"./pages/section-sobremiInformacion.html"
 ];
 
+
+
 function loadSection(section){
     return fetch(section)
         .then(response => response.text())
         .catch(error => console.log("Erro al cargar la seccion: " + section));
+}
+
+async function publicaciones(){
+    await loadDataSliderPublicaciones();
+    initSlider();
+}
+
+function scrollToSectionFromQuery() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sectionId = urlParams.get('section');
+    
+    // Imprimir los parámetros de la URL y el ID de la sección para depuración
+    console.log(urlParams);
+    console.log(sectionId);
+    
+    if (sectionId) {
+        const sectionElement = document.getElementById(sectionId);
+        
+        // Imprimir el elemento de la sección para depuración
+        console.log(sectionElement);
+        
+        if (sectionElement) {
+            // Obtener la posición superior del elemento
+            const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY;
+            
+            // Desplazar la vista a la posición calculada
+            window.scrollTo({ top: topPosition - 70, behavior: 'smooth' });
+            
+            // Actualizar la URL sin recargar la página
+            history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
+            
+            console.log("Entro 1");
+        } else {
+            // Crear un observador de mutación para detectar cuándo se añade la sección al DOM
+            const observer = new MutationObserver(() => {
+                const sectionElement = document.getElementById(sectionId);
+                if (sectionElement) {
+                    const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: topPosition - 70, behavior: 'smooth' });
+                    
+                    // Actualizar la URL sin recargar la página
+                    history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
+                    
+                    console.log("Entro 2");
+                    observer.disconnect();
+                }
+            });
+
+            // Configurar el observador para observar cambios en el cuerpo del documento
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        }
+    }
 }
 
 async function loadAllSections(){
@@ -27,8 +84,8 @@ async function loadAllSections(){
     }
     // Después de cargar todas las secciones, inicializa el video
     initVideo();
-    await loadDataSliderPublicaciones();
-    initSlider();
+    publicaciones();
+    scrollToSectionFromQuery();
 }
 
 window.onload = () => {
