@@ -19,7 +19,7 @@ section {
 }
   
 .PublicationDetail-title {
-    height: 10%;
+    height: 120px;
     width: 100%;
     padding: 0% 10%;
     text-align: center;
@@ -29,7 +29,7 @@ section {
     font-size: 2rem;
 }
 .PublicationDetail-container {
-    height: 90%;
+    height: 100%;
     width: 100%;
     padding: 0 10%;
     border: 1px solid rebeccapurple;
@@ -40,10 +40,11 @@ section {
     flex-wrap: wrap;
 }
 .PublicationDetail-imageContainer {
-    width: 50%;
-    height: 90%;
+    width: calc(50% - 60px);
+    height: calc(100% - 120px);
     position: relative;
     border: 3px solid black;
+    display: none;
 }
 
 .PublicationDetail-etiqueta{
@@ -73,42 +74,48 @@ section {
     /* transition: opacity 1s ease-in-out, transform 1s ease-in-out; */
 }
 .PublicationDetail-elementsContainer {
-    width: 47%;
-    height: 90%;
+    width: 50%;
+    height: calc(100% - 120px);
     border: 1px solid brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .PublicationDetail-btn-carousel{
     width: 5%;
     cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    z-index: 2;
 }
 
 .PublicationDetail-btnPrev{
-
+    left: 5%;
 }
 
 .PublicationDetail-btnNext{
-
+    right: 5%;
 }
 
 .PublicationDetail-carousel {
-    width: 100%;
-    height: 10%;
+    width: calc(50% - 60px);
+    height: calc(100% - 120px);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .PublicationDetail_sliderGallery {
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    gap: 5%;
-    padding: 0 0 0 5%;
 }
 
 .PublicationDetail_sliderGallery::-webkit-scrollbar {
@@ -117,7 +124,7 @@ section {
 
 .PublicationDetail_slideer {
     height: 100%;
-    min-width: 20%;
+    min-width: 100%;
     display: flex;
     align-items: center;
 }
@@ -246,4 +253,32 @@ section {
 }
 .PublicationDetail-button--more {
     margin-left: 50%;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, width 0.7s ease, height 0.4s ease, border-radius 0.6s ease;
+}
+
+.indicator.active {
+    background-color: #ffffff;
+    width: 15px;
+    height: 4px;
+    border-radius: 0;
 }

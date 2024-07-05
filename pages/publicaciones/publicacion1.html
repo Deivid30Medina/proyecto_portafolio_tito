@@ -31,7 +31,7 @@
           <i class="bi bi-x-lg"></i>
         </button>
         <li class="liApartado">
-          <!-- ../../index.html?section=publicacione -->
+          <!-- ../../index.html?section=publicaciones -->
           <a class="enlaceLiApartado" href="#idFichatecnica">LIRBROS POP PUP</a>
         </li>
         <li class="liApartado">
@@ -96,48 +96,56 @@
         </a>
       </div>
     </section>
+    <h1 class="PublicationDetail-title">
+      LITERATURA INFANTIL PARA LA DIVERSIDAD SEXUAL
+    </h1>
     <section id="idFichatecnica" class="PublicationDetail">
-      <h1 class="PublicationDetail-title">
-        LITERATURA INFANTIL PARA LA DIVERSIDAD SEXUAL
-      </h1>
       <div class="PublicationDetail-container">
         <div class="PublicationDetail-imageContainer">
+
+          <img class="PublicationDetail-image" id="mainImage" src="../../assets/images/publications/publicacion1/carrusel-foto-1.jpg"
+            alt="Imagen Carrusel" />
+
+
+        </div>
+        <div class="PublicationDetail-carousel">
           <p class="PublicationDetail-label1 PublicationDetail-etiqueta">
             5 de junio
           </p>
           <p class="PublicationDetail-label2 PublicationDetail-etiqueta">
             2024
           </p>
-          <img class="PublicationDetail-image" id="mainImage" src="../../assets/images/publications/publicacion1/carrusel-foto-1.jpg"
-            alt="Imagen Carrusel" />
+          <img class="PublicationDetail-btnPrev PublicationDetail-btn-carousel" id="idBtnPrev"
+          src="../../assets/svg/icons/CarruselPrev.svg" alt="" />
+
+          <div class="PublicationDetail_sliderGallery" id="idSliderGallery">
+
+            <div class="PublicationDetail_slideer">
+              <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-2.jpg" alt="Publicicacion 1">
+            </div>
+            <div class="PublicationDetail_slideer">
+              <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-3.jpg" alt="Publicicacion 2">
+            </div>
+            <div class="PublicationDetail_slideer">
+              <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-4.jpg" alt="Publicicacion 1">
+            </div>
+            <div class="PublicationDetail_slideer">
+              <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-5.jpg" alt="Publicicacion 2">
+            </div>
+            <div class="PublicationDetail_slideer">
+              <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-6.jpg" alt="Publicicacion 1">
+            </div>
+            <div class="PublicationDetail_slideer">
+              <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-7.jpg" alt="Publicicacion 2">
+            </div>
+          </div>
+          <img class="PublicationDetail-btnNext PublicationDetail-btn-carousel" id="idBtnNex"
+          src="../../assets/svg/icons/CarruselNext.svg" alt="" />
+          <div class="indicators">
+            <!-- Los puntos se generarán dinámicamente -->
+          </div>
         </div>
         <div class="PublicationDetail-elementsContainer">
-          <div class="PublicationDetail-carousel">
-            <img class="PublicationDetail-btnPrev PublicationDetail-btn-carousel" id="idBtnPrev"
-              src="../../assets/svg/icons/CarruselPrev.svg" alt="" />
-            <div class="PublicationDetail_sliderGallery" id="idSliderGallery">
-              <div class="PublicationDetail_slideer">
-                <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-2.jpg" alt="Publicicacion 1">
-              </div>
-              <div class="PublicationDetail_slideer">
-                <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-3.jpg" alt="Publicicacion 2">
-              </div>
-              <div class="PublicationDetail_slideer">
-                <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-4.jpg" alt="Publicicacion 1">
-              </div>
-              <div class="PublicationDetail_slideer">
-                <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-5.jpg" alt="Publicicacion 2">
-              </div>
-              <div class="PublicationDetail_slideer">
-                <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-6.jpg" alt="Publicicacion 1">
-              </div>
-              <div class="PublicationDetail_slideer">
-                <img class="PublicationDetail_slider_img" src="../../assets/images/publications/publicacion1/carrusel-foto-7.jpg" alt="Publicicacion 2">
-              </div>
-            </div>
-            <img class="PublicationDetail-btnNext PublicationDetail-btn-carousel" id="idBtnNex"
-              src="../../assets/svg/icons/CarruselNext.svg" alt="" />
-          </div>
           <div class="PublicationDetail-detail-information">
             <div class="PublicationDetail-Title-detail">
               <h2 class="PublicationDetail-subtitle">Let Me Out!</h2>
@@ -276,8 +284,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="../../../scripts/main.js"></script>
-  <script src="../../scripts/components/publicactions/sliderPublicacion.js"></script>
+  <script src="../../scripts/main.js"></script>
+  <!-- <script src="../../scripts/components/publicactions/sliderPublicacion.js"></script> -->
+  <script src="../../scripts/components/publicactions/slider-seccion-publicaciones.js"  defer></script>
 </body>
 
 </html>
