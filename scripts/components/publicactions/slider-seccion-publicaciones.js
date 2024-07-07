@@ -124,7 +124,7 @@ function initSlider() {
 
 
         // Iniciar el desplazamiento automático
-        // startAutoSlide();
+        startAutoSlide();
     } else {
         console.error("No se encontraron los elementos del slider."); // Muestra un error si los elementos no fueron encontrados
     }

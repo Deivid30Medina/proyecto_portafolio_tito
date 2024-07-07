@@ -32,7 +32,6 @@ section {
     height: 100%;
     width: 100%;
     padding: 0 10%;
-    border: 1px solid rebeccapurple;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,7 +75,6 @@ section {
 .PublicationDetail-elementsContainer {
     width: 50%;
     height: calc(100% - 120px);
-    border: 1px solid brown;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -151,7 +149,7 @@ section {
     height: 20%;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
@@ -186,11 +184,13 @@ section {
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    border-top: 1px solid gray;
+    border-top: 1px solid rgb(197, 197, 197);
 }
 
 .PublicationDetail-LabelComun{
     width: 20%;
+    color: rgb(148, 148, 148);
+    font-size: 0.8rem;
 }
 
 .PublicationDetail-authorsInfo {
@@ -199,6 +199,8 @@ section {
 
 }
 .PublicationDetail-data {
+    color: rgb(148, 148, 148);
+    font-size: 0.8rem;
 }
 .PublicationDetail-publicationInfo {
 }
@@ -226,7 +228,7 @@ section {
 
 }
 .PublicationDetail-dimensionsInfo {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(197, 197, 197);;
 }
 .PublicationDetail-dimensionsLabel {
 
@@ -238,7 +240,6 @@ section {
     align-items: center;
     justify-content: flex-start;
     height: 10%;
-    border: 1px solid rgb(65, 240, 12);
 }
 .PublicationDetail-buttonLink {
     width: auto;
