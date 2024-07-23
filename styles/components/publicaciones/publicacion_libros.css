@@ -135,9 +135,9 @@ section {
     content: " ";
     width: 100%;
     height: 100%;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     pointer-events: none;
-
+    z-index: 1;
 }
 
 .PublicationDetail_sliderGallery::-webkit-scrollbar {
@@ -151,6 +151,7 @@ section {
     align-items: center;
     justify-content: center;
 }
+
 
 .PublicationDetail_slider_span{
     width: 100%;
@@ -215,6 +216,7 @@ section {
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
+    font-size: 1vw;
 }
 .PublicationDetail-FichaTecnica{
     width: 100%;
@@ -224,6 +226,7 @@ section {
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: nowrap;
+    
 }
 .PublicationDetail-details-informacion{
     width: 100%;
@@ -390,6 +393,7 @@ section {
     grid-template-rows: repeat(2, 50%);
     gap: 20px;
     padding: 0 0 21px 0;
+    z-index: 2;
 }
 .PublicacionCarrusel_slideer img:nth-child(1) {
     grid-column: 1 / 2;
@@ -403,8 +407,40 @@ section {
     width: 100%;
     height: 100%;
     border: 2px solid black;
-
+    transition: transform 0.5s ease, object-position 0.5s ease;
 }
+
+/* Efectos de zoom hacia adentro en diferentes puntos */
+.PublicacionCarrusel_slider_img:nth-child(1):hover {
+    transform: scale(1.2);
+    object-position: top left;
+}
+
+.PublicacionCarrusel_slider_img:nth-child(2):hover {
+    transform: scale(1.2);
+    object-position: top;
+}
+
+.PublicacionCarrusel_slider_img:nth-child(3):hover {
+    transform: scale(1.2);
+    object-position: top right;
+}
+
+.PublicacionCarrusel_slider_img:nth-child(4):hover {
+    transform: scale(1.2);
+    object-position: bottom left;
+}
+
+.PublicacionCarrusel_slider_img:nth-child(5):hover {
+    transform: scale(1.2);
+    object-position: bottom right;
+}
+
+.PublicacionCarrusel_slider_img:nth-child(6):hover {
+    transform: scale(1.2);
+    object-position: center;
+}
+
 .PublicacionCarrusel_btnNext {
     width: 10%;
     height: 8%;
@@ -447,4 +483,9 @@ section {
     width: 15px;
     height: 4px;
     border-radius: 0;
+}
+
+
+.publicacionYoutube{
+    border: 1px solid red;
 }
