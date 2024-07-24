@@ -1,11 +1,11 @@
 // slider.js
 
 function initSlider() {
-    const scrollContainer = document.querySelector(".PublicationDetail_sliderGallery");
-    const prevBtn = document.getElementById("idBtnPrev");
-    const nextBtn = document.getElementById("idBtnNex");
-    const indicatorsContainer = document.querySelector(".indicators");
-    const slides = document.querySelectorAll(".PublicationDetail_slideer");
+    const scrollContainer = document.querySelector(".PublicacionCarrusel_sliderGallery");
+    const prevBtn = document.getElementById("idBtnPrev2");
+    const nextBtn = document.getElementById("idBtnNex2");
+    const indicatorsContainer = document.querySelector(".PublicacionCarrusel_indicators");
+    const slides = document.querySelectorAll(".PublicacionCarrusel_slideer");
     const velocidadSlide = 300;
     let indicatorNow = 0;
     let autoSlideInterval;
@@ -14,7 +14,6 @@ function initSlider() {
 
     if (scrollContainer && prevBtn && nextBtn) {
         const containerWidth = scrollContainer.offsetWidth ;
-        console.log(containerWidth);
 
         // Inicializa la posición del scroll al inicio
         const initializePosition = () => {
@@ -42,16 +41,16 @@ function initSlider() {
         const createIndicators = () => {
             for (let i = 0; i < slides.length; i++) {
                 const indicator = document.createElement("div");
-                indicator.classList.add("indicator");
-                indicator.classList.add(`id-indicator-${i}`);
+                indicator.classList.add("indicator2");
+                indicator.classList.add(`id-indicator2-${i}`);
                 if (i === 0) indicator.classList.add("active");
                 indicatorsContainer.appendChild(indicator);
             }
         };
 
         const pintIndicator = (next, prev) => {
-            const indicatorOld = document.querySelector(`.id-indicator-${prev}`);
-            const indicatorNew = document.querySelector(`.id-indicator-${next}`);
+            const indicatorOld = document.querySelector(`.id-indicator2-${prev}`);
+            const indicatorNew = document.querySelector(`.id-indicator2-${next}`);
             indicatorNew.classList.add("active");
             indicatorOld.classList.remove("active");
         }

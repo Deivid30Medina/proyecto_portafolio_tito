@@ -1,11 +1,11 @@
 // slider.js
 
 function initSlider() {
-    const scrollContainer = document.querySelector(".PublicacionCarrusel_sliderGallery");
-    const prevBtn = document.getElementById("idBtnPrev2");
-    const nextBtn = document.getElementById("idBtnNex2");
-    const indicatorsContainer = document.querySelector(".PublicacionCarrusel_indicators");
-    const slides = document.querySelectorAll(".PublicacionCarrusel_slideer");
+    const scrollContainer = document.querySelector(".PublicacionCarruselYoutube_sliderGallery");
+    const prevBtn = document.getElementById("idBtnPrev3");
+    const nextBtn = document.getElementById("idBtnNex3");
+    const indicatorsContainer = document.querySelector(".PublicacionCarruselYoutube_indicators");
+    const slides = document.querySelectorAll(".PublicacionCarruselYoutube_slideer");
     const velocidadSlide = 300;
     let indicatorNow = 0;
     let autoSlideInterval;
@@ -14,7 +14,6 @@ function initSlider() {
 
     if (scrollContainer && prevBtn && nextBtn) {
         const containerWidth = scrollContainer.offsetWidth ;
-        console.log(containerWidth);
 
         // Inicializa la posición del scroll al inicio
         const initializePosition = () => {
@@ -42,16 +41,16 @@ function initSlider() {
         const createIndicators = () => {
             for (let i = 0; i < slides.length; i++) {
                 const indicator = document.createElement("div");
-                indicator.classList.add("indicator2");
-                indicator.classList.add(`id-indicator2-${i}`);
+                indicator.classList.add("indicator3");
+                indicator.classList.add(`id-indicator3-${i}`);
                 if (i === 0) indicator.classList.add("active");
                 indicatorsContainer.appendChild(indicator);
             }
         };
 
         const pintIndicator = (next, prev) => {
-            const indicatorOld = document.querySelector(`.id-indicator2-${prev}`);
-            const indicatorNew = document.querySelector(`.id-indicator2-${next}`);
+            const indicatorOld = document.querySelector(`.id-indicator3-${prev}`);
+            const indicatorNew = document.querySelector(`.id-indicator3-${next}`);
             indicatorNew.classList.add("active");
             indicatorOld.classList.remove("active");
         }
@@ -125,7 +124,7 @@ function initSlider() {
 
 
         // Iniciar el desplazamiento automático
-        startAutoSlide();
+        // startAutoSlide();
     } else {
         console.error("No se encontraron los elementos del slider."); // Muestra un error si los elementos no fueron encontrados
     }
