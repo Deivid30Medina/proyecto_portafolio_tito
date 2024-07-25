@@ -2,9 +2,9 @@
 
 function initSlider() {
     const scrollContainer = document.querySelector(".PublicationDetail_sliderGallery");
-    const prevBtn = document.getElementById("idBtnPrev");
-    const nextBtn = document.getElementById("idBtnNex");
-    const indicatorsContainer = document.querySelector(".indicators");
+    const prevBtn = document.getElementById("idBtnPrev0");
+    const nextBtn = document.getElementById("idBtnNex0");
+    const indicatorsContainer = document.querySelector(".indicators0");
     const slides = document.querySelectorAll(".PublicationDetail_slideer");
     const velocidadSlide = 300;
     let indicatorNow = 0;
@@ -41,16 +41,16 @@ function initSlider() {
         const createIndicators = () => {
             for (let i = 0; i < slides.length; i++) {
                 const indicator = document.createElement("div");
-                indicator.classList.add("indicator");
-                indicator.classList.add(`id-indicator-${i}`);
+                indicator.classList.add("indicator0");
+                indicator.classList.add(`id-indicator0-${i}`);
                 if (i === 0) indicator.classList.add("active");
                 indicatorsContainer.appendChild(indicator);
             }
         };
 
         const pintIndicator = (next, prev) => {
-            const indicatorOld = document.querySelector(`.id-indicator-${prev}`);
-            const indicatorNew = document.querySelector(`.id-indicator-${next}`);
+            const indicatorOld = document.querySelector(`.id-indicator0-${prev}`);
+            const indicatorNew = document.querySelector(`.id-indicator0-${next}`);
             indicatorNew.classList.add("active");
             indicatorOld.classList.remove("active");
         }

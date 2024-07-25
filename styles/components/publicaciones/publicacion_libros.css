@@ -14,7 +14,7 @@ p{
 
 section {
     scroll-margin-top: 60px;
-    margin-top: 0px;
+    margin-top: 0px !important;
     height: calc(100vh - 60px);
     width: 100vw;
 }
@@ -314,7 +314,7 @@ section {
 
 }
 
-.indicators {
+.indicators0 {
     position: absolute;
     bottom: 5%;
     left: 5%;
@@ -325,7 +325,7 @@ section {
     margin-top: 20px;
 }
 
-.indicator {
+.indicator0 {
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -335,7 +335,7 @@ section {
     transition: background-color 0.5s ease, width 0.7s ease, height 0.4s ease, border-radius 0.6s ease;
 }
 
-.indicator.active {
+.indicator0.active {
     background-color: #ffffff;
     width: 15px;
     height: 4px;
@@ -497,7 +497,7 @@ section {
 
 
 .publicacionYoutube{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .PublicacionCarruselYoutube_containerPrincipal {
@@ -578,4 +578,31 @@ section {
     width: 15px;
     height: 4px;
     border-radius: 0;
+}
+
+.publicaciones{
+
+}
+
+.dashed-line-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0;
+    position: relative;
+}
+
+.dashed-line-svg {
+    width: 100%;
+    height: 7.4px;
+    /* stroke-dasharray="10,10" define los guiones (10 unidades) y los espacios (10 unidades). */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="10"><line x1="0" y1="5" x2="100%" y2="5" stroke="black" stroke-width="4" stroke-dasharray="10,10" /></svg>') repeat-x;
+}
+
+.iconTijera{
+    position: absolute;
+    z-index: 2;
+    width: auto;
+    height: 4.6rem;
 }
