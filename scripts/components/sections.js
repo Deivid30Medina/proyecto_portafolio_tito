@@ -45,7 +45,7 @@ function scrollToSectionFromQuery() {
             const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY;
             
             // Desplazar la vista a la posición calculada
-            window.scrollTo({ top: topPosition - 70, behavior: 'smooth' });
+            window.scrollTo({ top: topPosition - 60, behavior: 'smooth' });
             
             // Actualizar la URL sin recargar la página
             history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
