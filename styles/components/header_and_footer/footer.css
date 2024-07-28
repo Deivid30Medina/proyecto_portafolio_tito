@@ -46,10 +46,6 @@ contrast(100%): Ajusta el contraste del SVG. */
     transition: transform 0.5s ease-in-out;
 }
 
-.ContainerinformacionFooter:hover {
-    transform: scale(1.2);
-}
-
 
 .footerPTito {
     font-size: var(--size_footerTito);

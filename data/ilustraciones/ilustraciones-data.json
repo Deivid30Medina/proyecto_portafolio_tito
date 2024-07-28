@@ -1,0 +1,60 @@
+{
+  "carruselPrincipal": [
+    {
+      "id": 1,
+      "titulo": "Familia 1",
+      "imagenes": [
+        {
+          "id": 1,
+          "url": "ruta/a/imagen1.jpg",
+          "descripcion": "Descripción de la imagen 1"
+        },
+        {
+          "id": 2,
+          "url": "ruta/a/imagen2.jpg",
+          "descripcion": "Descripción de la imagen 2"
+        }
+      ],
+      "carruselInterno": [
+        {
+          "id": 1,
+          "url": "ruta/a/imagenInterna1.jpg",
+          "descripcion": "Descripción de la imagen interna 1"
+        },
+        {
+          "id": 2,
+          "url": "ruta/a/imagenInterna2.jpg",
+          "descripcion": "Descripción de la imagen interna 2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Familia 2",
+      "imagenes": [
+        {
+          "id": 3,
+          "url": "ruta/a/imagen3.jpg",
+          "descripcion": "Descripción de la imagen 3"
+        },
+        {
+          "id": 4,
+          "url": "ruta/a/imagen4.jpg",
+          "descripcion": "Descripción de la imagen 4"
+        }
+      ],
+      "carruselInterno": [
+        {
+          "id": 3,
+          "url": "ruta/a/imagenInterna3.jpg",
+          "descripcion": "Descripción de la imagen interna 3"
+        },
+        {
+          "id": 4,
+          "url": "ruta/a/imagenInterna4.jpg",
+          "descripcion": "Descripción de la imagen interna 4"
+        }
+      ]
+    }
+  ]
+}
