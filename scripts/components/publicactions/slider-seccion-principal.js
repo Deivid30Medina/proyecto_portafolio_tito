@@ -50,7 +50,6 @@ export function initSlider() {
         };
 
         const pintIndicator = (next, prev) => {
-            console.log(next, prev);
             const indicatorOld = document.querySelector(`.id-indicator-${prev}`);
             const indicatorNew = document.querySelector(`.id-indicator-${next}`);
             indicatorNew.classList.add("active");

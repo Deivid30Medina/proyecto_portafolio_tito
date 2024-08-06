@@ -1,0 +1,380 @@
+
+.ilustaciones{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.classIlustracionTitle{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.PublicacionCarrusel_containerPrincipal {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PublicacionCarrusel_btnPrev {
+    width: 10%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+}
+.PublicacionCarrusel_btnPrev:hover {
+    transform: scale(1.2);
+}
+.PublicacionCarrusel_containerCarrusel {
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+
+.PublicacionCarrusel_full_height {
+}
+.PublicacionCarrusel_sliderGallery {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.PublicacionCarrusel_sliderGallery::-webkit-scrollbar {
+    display: none;
+}
+
+.PublicacionCarrusel_full_height {
+}
+.PublicacionCarrusel_slideer {
+    min-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 50%);
+    gap: 20px;
+    padding: 0 0 21px 0;
+    z-index: 2;
+}
+
+.zoom-container {
+    overflow: hidden;
+    border: 3px solid black;
+}
+
+.PublicacionCarrusel_slideer div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.PublicacionCarrusel_slideer div:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.PublicacionCarrusel_slideer div:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.PublicacionCarrusel_slideer div:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+}
+
+.PublicacionCarrusel_slideer div:nth-child(5) {
+    grid-column: 4 / -1;
+    grid-row: 1 / 2;
+}
+
+.PublicacionCarrusel_slider_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, transform-origin 0.5s ease-in-out;
+
+}
+
+.zoom-container:hover .PublicacionCarrusel_slider_img {
+    transform: scale(1.5);
+}
+
+.zoom-top-left:hover .PublicacionCarrusel_slider_img {
+    transform-origin: top left;
+    
+}
+
+.zoom-top-right:hover .PublicacionCarrusel_slider_img {
+    transform-origin: top right;
+}
+
+.zoom-bottom-left:hover .PublicacionCarrusel_slider_img {
+    transform-origin: bottom left;
+}
+
+.zoom-bottom-right:hover .PublicacionCarrusel_slider_img {
+    transform-origin: bottom right;
+}
+
+.zoom-center:hover .PublicacionCarrusel_slider_img {
+    transform-origin: center;
+}
+
+.zoom-right:hover .PublicacionCarrusel_slider_img {
+    transform-origin: right;
+}
+
+.zoom-top:hover .PublicacionCarrusel_slider_img {
+    transform-origin: top;
+}
+
+
+.PublicacionCarrusel_btnNext {
+    width: 10%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.PublicacionCarrusel_btnNext:hover {
+    transform: scale(1.2);
+}
+
+.PublicacionCarrusel_indicators {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    bottom: -5%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.indicator2 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, width 0.7s ease, height 0.4s ease, border-radius 0.6s ease;
+}
+
+.indicator2.active {
+    background-color: #000000;
+    width: 15px;
+    height: 4px;
+    border-radius: 0;
+}
+
+
+.PublicacionCarrusel_containerSecundario{
+    z-index: 3;
+    width: 80%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-top-right-radius: 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    margin: 0 10%;
+}
+.PublicacionCarrusel_containerSecundario_hiden{
+    display: none;
+}
+.PublicacionCarrusel_containerSecundario_Title {
+    width: 100%;
+    height: 10%;
+    padding: 1% 0 0 0;
+    position: relative;
+}
+.PublicacionCarrusel_containerSecundario_btn_cerrar{
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    height: auto;
+    width: 50px;
+    cursor: pointer;
+    z-index: 5;
+}
+.PublicacionCarrusel_containerSecundario_Title_principal {
+    text-align: center;
+    font-weight: bold;
+}
+.PublicacionCarrusel_containerSecundario_Title_secundario {
+    text-align: center;
+}
+.PublicacionCarrusel_containerSecundario_Carruseles {
+    width: 100%;
+    height: 80%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.PublicacionCarrusel_containerSecundario_btns{
+    width: 5%;
+    height: 10%;
+    object-fit: scale-down;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.PublicacionCarrusel_containerSecundario_btns{
+    width: 5%;
+    height: 10%;
+    object-fit: scale-down;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.PublicacionCarrusel_containerSecundario_btns:hover {
+    transform: scale(1.2);
+}
+
+.PublicacionCarrusel_containerSecundario_btnPrev {
+
+}
+.PublicacionCarrusel_containerSecundario_container_family{
+    width: 90%;
+    height: 100%;
+}
+
+.PublicacionCarrusel_containerSecundario_slideer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+
+.PublicacionCarrusel_containerSecundario_slideer::-webkit-scrollbar {
+    display: none;
+}
+.PublicacionCarrusel_containerSecundario_slideer_item{
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.PublicacionCarrusel_containerSecundario_slider_span{
+    position: relative;
+    height: 100%;
+}
+
+.PublicacionCarrusel_containerSecundario_slider_span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(
+        to bottom,
+        transparent 80%,
+        rgba(211, 210, 210, 0.5) 85%,
+        rgba(151, 150, 150, 0.5) 90%,
+        rgb(105, 105, 105) 100%
+    );
+    mix-blend-mode: multiply;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Asegurarse de que la transición para la opacidad sea suave */
+}
+
+
+.PublicacionCarrusel_containerSecundario_slider_img {
+    object-fit: scale-down;
+    height: 100%;
+    width: auto;
+    border: 3px solid black;
+}
+
+.PublicacionCarrusel_containerSecundario_descarga{
+    position: absolute;
+    right: 20px;
+    bottom: 2%;
+    height: auto;
+    width: 50px;
+    z-index: 5;
+}
+.PublicacionCarrusel_containerSecundario_descarga_img{
+    width: 100%;
+    height: 100%;
+}
+
+.PublicacionCarrusel_containerSecundario_btnNext {
+}
+.PublicacionCarrusel_containerSecundario_indicators {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 0 10px 0;
+}
+
+.indicator4 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #21fc04;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, width 0.7s ease, height 0.4s ease, border-radius 0.6s ease;
+}
+
+.indicator4.active {
+    background-color: #21fc04;
+    width: 15px;
+    height: 4px;
+    border-radius: 0;
+}
+
+.classOcultarSpan{
+    position: absolute;
+    display: none;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.3;
+    mix-blend-mode: multiply;
+}

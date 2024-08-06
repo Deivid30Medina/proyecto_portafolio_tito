@@ -6,7 +6,7 @@ const sections = [
     "./pages/section-video.html"
     ,"./pages/publicaciones/section-publicaciones.html"
     ,"./pages/linea-punteada.html"
-    ,"./pages/section-ilustraciones.html"
+    ,"./pages/ilustraciones/section-ilustraciones.html"
     ,"./pages/linea-punteada.html"
     ,"./pages/section-sobremiVideos.html"
     ,"./pages/linea-punteada.html"
@@ -24,6 +24,17 @@ function loadSection(section){
 async function publicaciones(){
     await loadDataSliderPublicaciones();
     initSlider();
+}
+
+function ilustraciones(){
+    let rutaArchivo = "./scripts/components/publicactions/2-carruselPublicaciones.js";
+
+    let nuevoScript = document.createElement('script');
+    nuevoScript.src = rutaArchivo;
+    
+    // Insertar el nuevo script al final del body
+    document.body.appendChild(nuevoScript);
+
 }
 
 function scrollToSectionFromQuery() {
@@ -85,6 +96,7 @@ async function loadAllSections(){
     // Después de cargar todas las secciones, inicializa el video
     initVideo();
     publicaciones();
+    ilustraciones();
     scrollToSectionFromQuery();
 }
 
