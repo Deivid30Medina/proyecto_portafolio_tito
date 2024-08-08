@@ -1,87 +1,131 @@
 let slider = null;
 
-document.addEventListener('DOMContentLoaded', function () {
-  const firstCarouselImages = document.querySelectorAll('#idSliderGallery1 .PublicacionCarrusel_slider_img');
+document.addEventListener("DOMContentLoaded", function () {
+  const firstCarouselImages = document.querySelectorAll(
+    "#idSliderGallery1 .PublicacionCarrusel_slider_img"
+  );
 
-  firstCarouselImages.forEach(image => {
-    image.addEventListener('click', function () {
-      const family = this.getAttribute('data-family');
+  firstCarouselImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      const family = this.getAttribute("data-family");
       showSecondCarousel(family);
     });
   });
 });
 
-function cerrarCarrusel(secondaryContainer) {
+function cerrarCarrusel(secondaryContainer,slides) {
   const closeBtn = document.getElementById("idCLoseCarrusel");
   closeBtn.addEventListener("click", () => {
-    deleteIndicator();
+    eliminarIndicators(slides);
     seeNextAndPrev();
     if (slider !== null) {
       slider.dispose();
       slider = null;
     }
-    secondaryContainer.style.display = 'none';
+    secondaryContainer.style.display = "none";
   });
 }
 
-function seeNextAndPrev(){
-  const spanOcultar = document.getElementById('idSpanOcultar');
-  spanOcultar.style.display = 'none';
+function seeNextAndPrev() {
+  const spanOcultar = document.getElementById("idSpanOcultar");
+  spanOcultar.style.display = "none";
+  spanOcultar.classList.remove("idSpanOcultar");
 
-  const nextDos = document.getElementById('idBtnNex2');
+  const nextDos = document.getElementById("idBtnNex2");
   nextDos.style.opacity = 1;
 
-  const prevDos = document.getElementById('idBtnPrev2');
+  const prevDos = document.getElementById("idBtnPrev2");
   prevDos.style.opacity = 1;
 }
 
-function handleNextAndPrev(){
-  const spanOcultar = document.getElementById('idSpanOcultar');
-  spanOcultar.style.display = 'block';
+function handleNextAndPrev() {
+  const spanOcultar = document.getElementById("idSpanOcultar");
+  spanOcultar.style.display = "block";
+  spanOcultar.classList.add("idSpanOcultar");
 
-  const nextDos = document.getElementById('idBtnNex2');
-  nextDos.style.opacity = 0.5;
+  const nextDos = document.getElementById("idBtnNex2");
+  nextDos.style.opacity = 0.2;
 
-  const prevDos = document.getElementById('idBtnPrev2');
-  prevDos.style.opacity = 0.5;
-}
-
-
-function deleteIndicator() {
-  const indicatorContainer = document.querySelector('.PublicacionCarrusel_containerSecundario_indicators');
-  const indicatorsItem = document.querySelectorAll('.indicator4');
-  indicatorsItem.forEach((item) => {
-    item.classList.remove("active");
-    indicatorContainer.removeChild(item);
-  });
-  
+  const prevDos = document.getElementById("idBtnPrev2");
+  prevDos.style.opacity = 0.2;
 }
 
 function showSecondCarousel(family) {
-  const secondaryCarousels = document.querySelectorAll('.PublicacionCarrusel_containerSecundario_container_family');
-  secondaryCarousels.forEach(carousel => {
-    carousel.style.display = 'none';
+  const secondaryCarousels = document.querySelectorAll(
+    ".PublicacionCarrusel_containerSecundario_container_family"
+  );
+  secondaryCarousels.forEach((carousel) => {
+    carousel.style.display = "none";
   });
 
-  const selectedCarousel = document.querySelector(`.PublicacionCarrusel_containerSecundario_container_family[data-family="${family}"]`);
+  const selectedCarousel = document.querySelector(
+    `.PublicacionCarrusel_containerSecundario_container_family[data-family="${family}"]`
+  );
   if (selectedCarousel) {
-    selectedCarousel.style.display = 'block';
+    selectedCarousel.style.display = "block";
   }
 
-  const secondaryContainer = document.getElementById('idSliderGallerySecundario');
-  secondaryContainer.style.display = 'block';
+  const secondaryContainer = document.getElementById(
+    "idSliderGallerySecundario"
+  );
+  secondaryContainer.style.display = "block";
 
   handleNextAndPrev();
 
-  const scrollContainer = selectedCarousel.querySelector('.PublicacionCarrusel_containerSecundario_slideer');
-  const slides = selectedCarousel.querySelectorAll('.PublicacionCarrusel_containerSecundario_slideer_item');
+  const scrollContainer = selectedCarousel.querySelector(
+    ".PublicacionCarrusel_containerSecundario_slideer"
+  );
+  const slides = selectedCarousel.querySelectorAll(
+    ".PublicacionCarrusel_containerSecundario_slideer_item"
+  );
 
   if (slider !== null) {
     slider.dispose();
   }
 
+  createIndicators(slides);
+
   slider = new Slider(scrollContainer, slides);
-  cerrarCarrusel(secondaryContainer);
+  cerrarCarrusel(secondaryContainer,slides);
+}
+
+function createIndicators(sliders) {
+  sliders.forEach((slide, index) => {
+    // Crea el contenedor de indicadores
+    const indicatorsContainer = document.createElement("div");
+    indicatorsContainer.className =
+      "PublicacionCarrusel_containerSecundario_indicators";
+
+    // Añade los indicadores al contenedor
+    for (let i = 0; i < sliders.length; i++) {
+      const indicator = document.createElement("div");
+      indicator.className = `indicator4 id-indicator4-${i}`;
+      if (i === index) {
+        indicator.classList.add("active");
+      }
+      indicatorsContainer.appendChild(indicator);
+    }
+
+    // Añade el contenedor de indicadores al slide
+    const span = slide.querySelector(
+      ".PublicacionCarrusel_containerSecundario_slider_span"
+    );
+    span.appendChild(indicatorsContainer);
+  });
+}
+
+function eliminarIndicators(sliders) {
+  sliders.forEach((slide) => {
+    // Selecciona el contenedor de indicadores dentro del slide
+    const indicatorsContainer = slide.querySelector(
+      ".PublicacionCarrusel_containerSecundario_indicators"
+    );
+
+    // Si existe el contenedor de indicadores, lo elimina
+    if (indicatorsContainer) {
+      indicatorsContainer.remove();
+    }
+  });
 }
 
 class Slider {
@@ -95,7 +139,7 @@ class Slider {
 
     this.prevBtn = document.getElementById("idBtnPrev4");
     this.nextBtn = document.getElementById("idBtnNex4");
-    this.indicatorsContainer = document.querySelector(".PublicacionCarrusel_containerSecundario_indicators");
+
 
     this.initializeSlider();
   }
@@ -104,35 +148,22 @@ class Slider {
     const containerWidth = this.scrollContainer.offsetWidth;
 
     this.scrollContainer.scrollLeft = 0;
-
-    this.createIndicators();
-    this.updateIndicators(0);
+    // this.updateIndicators(0);
 
     this.prevBtn.addEventListener("click", this.handlePrevClick.bind(this));
     this.nextBtn.addEventListener("click", this.handleNextClick.bind(this));
-
-  }
-
-  createIndicators() {
-    this.indicatorsContainer.innerHTML = '';
-    this.slides.forEach((slide, index) => {
-      const indicator = document.createElement("div");
-      indicator.classList.add("indicator4");
-      indicator.classList.add(`id-indicator4-${index}`);
-      if (index === 0) indicator.classList.add("active");
-      this.indicatorsContainer.appendChild(indicator);
-    });
   }
 
   updateIndicators(direction) {
     const totalIndicators = this.slides.length;
     let prev = this.indicatorNow;
-    this.indicatorNow = (this.indicatorNow + direction + totalIndicators) % totalIndicators;
+    this.indicatorNow =
+      (this.indicatorNow + direction + totalIndicators) % totalIndicators;
     this.pintIndicator(this.indicatorNow, prev);
   }
 
   pintIndicator(next, prev) {
-    console.log(next,prev);
+    console.log(next, prev);
     const indicatorOld = document.querySelector(`.id-indicator4-${prev}`);
     const indicatorNew = document.querySelector(`.id-indicator4-${next}`);
     if (indicatorNew) indicatorNew.classList.add("active");
@@ -141,16 +172,19 @@ class Slider {
 
   handleNextClick() {
     const containerWidth = this.scrollContainer.offsetWidth;
-    this.scrollContainer.scrollBy({ left: containerWidth, behavior: 'smooth' });
+    this.scrollContainer.scrollBy({ left: containerWidth, behavior: "smooth" });
     setTimeout(this.checkPosition.bind(this), this.velocidadSlide);
-    this.updateIndicators(1);
+    // this.updateIndicators(1);
   }
 
   handlePrevClick() {
     const containerWidth = this.scrollContainer.offsetWidth;
-    this.scrollContainer.scrollBy({ left: -containerWidth, behavior: 'smooth' });
+    this.scrollContainer.scrollBy({
+      left: -containerWidth,
+      behavior: "smooth",
+    });
     setTimeout(this.checkPosition.bind(this), this.velocidadSlide);
-    this.updateIndicators(-1);
+    // this.updateIndicators(-1);
   }
 
   checkPosition() {
@@ -172,7 +206,6 @@ class Slider {
     this.stopAutoSlide();
     this.prevBtn.removeEventListener("click", this.handlePrevClick.bind(this));
     this.nextBtn.removeEventListener("click", this.handleNextClick.bind(this));
-    this.indicatorsContainer.innerHTML = '';
     this.scrollContainer.scrollLeft = 0;
     this.indicatorNow = 0;
   }

@@ -399,7 +399,7 @@ section {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 50%);
     gap: 20px;
-    padding: 0 0 21px 0;
+    padding: 20px 10px;
     z-index: 2;
 }
 
@@ -622,18 +622,17 @@ section {
 .PublicacionCarrusel_containerSecundario{
     z-index: 3;
     width: 80%;
-    height: 100%;
+    height: 95%;
     background-color: #ffffff;
     border: 2px solid black;
     border-top-right-radius: 20px;
     top: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    bottom: 0;
+    right: 0;
     position: absolute;
-    margin: 0 10%;
+    margin: auto 10%;
+    padding: 2% 0;
 }
 .PublicacionCarrusel_containerSecundario_hiden{
     display: none;
@@ -642,7 +641,9 @@ section {
     width: 100%;
     height: 10%;
     padding: 1% 0 0 0;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .PublicacionCarrusel_containerSecundario_btn_cerrar{
     position: absolute;
@@ -653,21 +654,24 @@ section {
     cursor: pointer;
     z-index: 5;
 }
-.PublicacionCarrusel_containerSecundario_Title_principal {
-    text-align: center;
-    font-weight: bold;
-}
-.PublicacionCarrusel_containerSecundario_Title_secundario {
-    text-align: center;
-}
+
 .PublicacionCarrusel_containerSecundario_Carruseles {
     width: 100%;
-    height: 80%;
-    margin-top: 2%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+}
+
+.idSpanOcultar{
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000096;
 }
 
 .PublicacionCarrusel_containerSecundario_btns{
@@ -760,7 +764,7 @@ section {
     right: 20px;
     bottom: 2%;
     height: auto;
-    width: 50px;
+    width: 40px;
     z-index: 5;
 }
 .PublicacionCarrusel_containerSecundario_descarga_img{
@@ -777,23 +781,23 @@ section {
     bottom: 0;
     left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
-    padding: 0 0 10px 0;
+    padding: 0 0 20px 20px;
 }
 
 .indicator4 {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #21fc04;
+    background-color: #575757;
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.5s ease, width 0.7s ease, height 0.4s ease, border-radius 0.6s ease;
 }
 
 .indicator4.active {
-    background-color: #21fc04;
+    background-color: #575757;
     width: 15px;
     height: 4px;
     border-radius: 0;
