@@ -2,7 +2,6 @@
 
 function initSlider() {
     const scrollContainer = document.querySelector(".PublicacionCarrusel_sliderGallery");
-    console.log(scrollContainer);
     const prevBtn = document.getElementById("idBtnPrev2");
     const nextBtn = document.getElementById("idBtnNex2");
     const indicatorsContainer = document.querySelector(".PublicacionCarrusel_indicators");

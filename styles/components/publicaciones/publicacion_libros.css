@@ -815,3 +815,7 @@ section {
     opacity: 0.3;
     mix-blend-mode: multiply;
 }
+
+body.no-scroll {
+    overflow: hidden;
+}

@@ -28,13 +28,16 @@ async function publicaciones(){
 
 function ilustraciones(){
     let rutaArchivo = "./scripts/components/publicactions/2-carruselPublicaciones.js";
+    let rutaArchivo2 = "./scripts/components/publicactions/4-carruselPublicacionesInterno.js";
 
     let nuevoScript = document.createElement('script');
     nuevoScript.src = rutaArchivo;
+    let nuevoScript2 = document.createElement('script');
+    nuevoScript2.src = rutaArchivo2;
     
     // Insertar el nuevo script al final del body
     document.body.appendChild(nuevoScript);
-
+    document.body.appendChild(nuevoScript2);
 }
 
 function scrollToSectionFromQuery() {
@@ -61,7 +64,6 @@ function scrollToSectionFromQuery() {
             // Actualizar la URL sin recargar la página
             history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
             
-            console.log("Entro 1");
         } else {
             // Crear un observador de mutación para detectar cuándo se añade la sección al DOM
             const observer = new MutationObserver(() => {
@@ -73,7 +75,6 @@ function scrollToSectionFromQuery() {
                     // Actualizar la URL sin recargar la página
                     history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
                     
-                    console.log("Entro 2");
                     observer.disconnect();
                 }
             });

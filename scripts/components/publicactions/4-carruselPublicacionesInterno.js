@@ -1,10 +1,10 @@
 let slider = null;
+let scrollPosition = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   const firstCarouselImages = document.querySelectorAll(
     "#idSliderGallery1 .PublicacionCarrusel_slider_img"
   );
-
   firstCarouselImages.forEach((image) => {
     image.addEventListener("click", function () {
       const family = this.getAttribute("data-family");
@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 function cerrarCarrusel(secondaryContainer,slides) {
   const closeBtn = document.getElementById("idCLoseCarrusel");
   closeBtn.addEventListener("click", () => {
     eliminarIndicators(slides);
     seeNextAndPrev();
+    addScrollBody();
     if (slider !== null) {
       slider.dispose();
       slider = null;
@@ -48,6 +50,52 @@ function handleNextAndPrev() {
 
   const prevDos = document.getElementById("idBtnPrev2");
   prevDos.style.opacity = 0.2;
+}
+
+function centrarSection(){
+  // Center the screen on the section with the specified ID
+  const section = document.getElementById("idCarruselImagenesPublicacion");
+
+  //Obtiene la posición vertical absoluta de un elemento en la página.
+  // Esto es útil para realizar desplazamientos precisos o para alinear otros elementos en función de la ubicación
+  const topPosition = section.getBoundingClientRect().top + window.scrollY;
+            
+  // Desplazar la vista a la posición calculada
+  window.scrollTo({ top: topPosition - 60, behavior: 'smooth' });
+
+  setTimeout(() => {
+    removeScroll();
+  }, "1000");
+
+
+}
+
+function removeScroll() {
+  // Guardar la posición actual del scroll
+  scrollPosition = window.scrollY;
+  console.log(scrollPosition);
+
+  let body = document.getElementById("idBody");
+  
+  // Fijar el body en su posición actual
+  body.style.position = 'fixed';
+  body.style.top = `-${scrollPosition}px`;
+}
+
+function addScrollBody(){
+
+  const section = document.getElementById("idCarruselImagenesPublicacion");
+
+  const body = document.body;
+
+  body.style.position = '';
+  body.style.top = '';
+
+  const topPosition = section.getBoundingClientRect().top + window.scrollY;
+            
+  // Desplazar la vista a la posición calculada
+  window.scrollTo({ top: topPosition - 60, behavior: 'smooth' });
+  
 }
 
 function showSecondCarousel(family) {
@@ -82,6 +130,8 @@ function showSecondCarousel(family) {
   if (slider !== null) {
     slider.dispose();
   }
+
+  centrarSection();
 
   createIndicators(slides);
 
