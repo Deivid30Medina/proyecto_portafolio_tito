@@ -1,19 +1,17 @@
 let slider = null;
 let scrollPosition = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
+function initEventListenet(){
   const firstCarouselImages = document.querySelectorAll(
     "#idSliderGallery1 .PublicacionCarrusel_slider_img"
   );
-  console.log(firstCarouselImages);
   firstCarouselImages.forEach((image) => {
     image.addEventListener("click", function () {
       const family = this.getAttribute("data-family");
       showSecondCarousel(family);
     });
   });
-});
-
+}
 
 function cerrarCarrusel(secondaryContainer,slides) {
   const closeBtn = document.getElementById("idCLoseCarrusel");
@@ -55,7 +53,7 @@ function handleNextAndPrev() {
 
 function centrarSection(){
   // Center the screen on the section with the specified ID
-  const section = document.getElementById("idCarruselImagenesPublicacion");
+  const section = document.getElementById("ilustaciones");
 
   //Obtiene la posición vertical absoluta de un elemento en la página.
   // Esto es útil para realizar desplazamientos precisos o para alinear otros elementos en función de la ubicación
@@ -74,7 +72,6 @@ function centrarSection(){
 function removeScroll() {
   // Guardar la posición actual del scroll
   scrollPosition = window.scrollY;
-  console.log(scrollPosition);
 
   let body = document.getElementById("idBody");
   
@@ -85,7 +82,7 @@ function removeScroll() {
 
 function addScrollBody(){
 
-  const section = document.getElementById("idCarruselImagenesPublicacion");
+  const section = document.getElementById("ilustaciones");
 
   const body = document.body;
 
@@ -261,3 +258,6 @@ class Slider {
     this.indicatorNow = 0;
   }
 }
+
+
+initEventListenet();

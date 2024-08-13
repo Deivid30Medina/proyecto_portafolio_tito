@@ -28,16 +28,16 @@ async function publicaciones(){
 
 function ilustraciones(){
     let rutaArchivo = "./scripts/components/publicactions/2-carruselPublicaciones.js";
-    let rutaArchivo2 = "./scripts/components/publicactions/4-carruselPublicacionesInterno.js";
+    let rutaArchivoDos = "./scripts/components/publicactions/4-carruselPublicacionesInterno-copy.js";
 
     let nuevoScript = document.createElement('script');
     nuevoScript.src = rutaArchivo;
-    let nuevoScript2 = document.createElement('script');
-    nuevoScript2.src = rutaArchivo2;
+    let nuevoScriptDos = document.createElement('script');
+    nuevoScriptDos.src = rutaArchivoDos;
     
     // Insertar el nuevo script al final del body
     document.body.appendChild(nuevoScript);
-    document.body.appendChild(nuevoScript2);
+    document.body.appendChild(nuevoScriptDos);
 }
 
 function scrollToSectionFromQuery() {
