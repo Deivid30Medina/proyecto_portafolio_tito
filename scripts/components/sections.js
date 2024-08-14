@@ -8,9 +8,9 @@ const sections = [
     ,"./pages/linea-punteada.html"
     ,"./pages/ilustraciones/section-ilustraciones.html"
     ,"./pages/linea-punteada.html"
-    ,"./pages/section-sobremiVideos.html"
+    ,"./pages/sobremi_videos/section-sobremiVideos.html"
     ,"./pages/linea-punteada.html"
-    ,"./pages/section-sobremiInformacion.html"
+    ,"./pages/sobremi_informacion/section-sobremiInformacion.html"
 ];
 
 

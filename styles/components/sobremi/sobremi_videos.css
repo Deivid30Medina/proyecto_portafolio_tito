@@ -1,0 +1,26 @@
+.sobremivideos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.TitleSobreMi {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedorVideoSobreMi{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.videoSobreMi {
+    height: 100%;
+    width: 80%;
+    border: 3px solid black;
+}
