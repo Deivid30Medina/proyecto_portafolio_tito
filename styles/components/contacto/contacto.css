@@ -1,0 +1,117 @@
+.sectionContacto{
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto {
+    height: 100%;
+    width: 80%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contacto-title {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacto-informacion {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.contacto-informacion-correo {
+    width: 50%;
+    height: 90%;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.contacto-informacion-correo-title {
+    height: 5%;
+    text-align: left;
+}
+.contacto-informacion-correo-texto {
+    text-align: left;
+    
+}
+.contacto-informacion-correo-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.contacto-informacion-correo-form-datos {
+}
+.contacto-informacion-correo-form-send {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacto-informacion-correo-form-send-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contacto-informacion-correo-form-send-button {
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+}
+.contacto-informacion-correo-form-send-informacion {
+}
+
+.enlaceWhat{
+    width: 10%;
+    height: 100%;
+    border: 1px solid rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
+.enlaceWhat:hover {
+    transform: scale(1.3);
+}
+.contacto-whatsapp{
+    object-fit: cover;
+    height: auto;
+    width: 80%;
+}
+
+.contacto-informacion-map {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.contacto-informacion-mapa{
+    border: 1px solid black;
+    height: 100%;
+    width: 90%
+}

@@ -8,9 +8,13 @@ const sections = [
     ,"./pages/linea-punteada.html"
     ,"./pages/ilustraciones/section-ilustraciones.html"
     ,"./pages/linea-punteada.html"
-    ,"./pages/sobremi_videos/section-sobremiVideos.html"
+    ,"./pages/sobre_mi/sobremi_videos/section-sobremiVideos.html"
     ,"./pages/linea-punteada.html"
-    ,"./pages/sobremi_informacion/section-sobremiInformacion.html"
+    ,"./pages/sobre_mi/sobremi_informacion/section-sobremiInformacion.html"
+    ,"./pages/linea-punteada.html"
+    ,"./pages/sobre_mi/sobremi_recomendados/section_sobremi_recomendados.html"
+    ,"./pages/linea-punteada.html"
+    ,"./pages/contacto/contacto.html"
 ];
 
 
@@ -43,11 +47,7 @@ function ilustraciones(){
 function scrollToSectionFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
     const sectionId = urlParams.get('section');
-    
-    // Imprimir los parámetros de la URL y el ID de la sección para depuración
-    console.log(urlParams);
-    console.log(sectionId);
-    
+        
     if (sectionId) {
         const sectionElement = document.getElementById(sectionId);
         
@@ -88,6 +88,26 @@ function scrollToSectionFromQuery() {
     }
 }
 
+function sobreMi(){
+    let rutaArchivo = "./scripts/components/sobre_mi/carruselRecomendaciones.js";
+
+    let nuevoScript = document.createElement('script');
+    nuevoScript.src = rutaArchivo;
+    
+    // Insertar el nuevo script al final del body
+    document.body.appendChild(nuevoScript);
+}
+
+function contactoMap(){
+    let rutaArchivo = "./scripts/components/contacto/mapa.js";
+
+    let nuevoScript = document.createElement('script');
+    nuevoScript.src = rutaArchivo;
+    
+    // Insertar el nuevo script al final del body
+    document.body.appendChild(nuevoScript);
+}
+
 async function loadAllSections(){
     const main = document.getElementById("idMain");
     for(let section of sections){
@@ -98,6 +118,8 @@ async function loadAllSections(){
     initVideo();
     publicaciones();
     ilustraciones();
+    sobreMi();
+    contactoMap()
     scrollToSectionFromQuery();
 }
 
