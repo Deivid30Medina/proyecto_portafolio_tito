@@ -1,0 +1,8 @@
+.mainBlog{
+    width: 100VW;
+}
+
+section{
+    margin-top: 0px;
+    height: calc(100vh - 60px);
+}

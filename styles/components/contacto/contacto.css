@@ -77,7 +77,7 @@
 .contacto-informacion-correo-form-send-button {
     background-color: gray;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 0px;
     color: white;
 }
 .contacto-informacion-correo-form-send-informacion {
@@ -108,10 +108,12 @@
     align-items: center;
     justify-content: center;
     border: 1px solid red;
+    position: relative; /* Asegura que se posicione en relación al contenedor */
+    z-index: 1; /* Menor z-index para que no sobreponga al header */
 }
 
-.contacto-informacion-mapa{
+.contacto-informacion-mapa {
     border: 1px solid black;
     height: 100%;
-    width: 90%
+    width: 90%;
 }
